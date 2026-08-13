@@ -1,80 +1,92 @@
+/* ==========================================
+   CONFIGURAÇÃO GERAL DA PÁGINA
+   ========================================== */
 body {
     background-color: #72c7ff;
     margin: 0;
+    padding: 0;
     min-height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column; 
+    align-items: stretch; /* Permite que o cabeçalho estique até as bordas */
     font-family: Arial, sans-serif;
 }
 
-.cabecalho {
-        background-color: #1e293b;
-        border-bottom: 3px solid #38bdf8; /* Linha de destaque azul */
-        padding-bottom: 30px;
-} 
-
-.img-banner {
-         width: 100%; /* Ocupa toda a largura da tela */
-         height: 180px; /* Altura fixa */
-         object-fit: cover; /* Impede que a imagem fique esticada ou esmagada */
-}
-
-.perfil-container {
-          text-align: center; /* Centraliza o nome e a biografia */
-          padding: 0 20px;
-}
-
-h1 {
-       color: #38bdf8;
-       margin-top: 12px;
-       font-size: 1.8rem;
-}
-p {
-       color: #94a3b8;
-       font-size: 1rem;
-       margin-top: 4px;
-}  
-
-.img-perfil {
-          width: 130px;
-          height: 130px;
-          object-fit: cover;
-          border-radius: 50%; /* O TRUQUE: Transforma o quadrado num círculo perfeito! */
-          border: 4px solid #38bdf8; /* Borda azul em volta da foto */
-          margin-top: -65px; /* Sobe a foto para sobrepor o banner */
-          background-color: #1e293b;
-}
-
-
+/* Garante que os elementos abaixo do cabeçalho fiquem centralizados */
 .container {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; 
     gap: 20px;
-    padding: 20px;
+    padding: 40px 20px; 
 }
 
-/* Autor no topo: Letras brancas, maiores e com destaque */
+/* ==========================================
+   ESTRUTURA DO CABEÇALHO (100% DA LARGURA)
+   ========================================== */
+.cabecalho {
+    background-color: #1e293b;
+    border-bottom: 3px solid #38bdf8; 
+    padding-bottom: 30px;
+    width: 100%; /* Força o cabeçalho a cobrir toda a área do site */
+} 
+
+.img-banner {
+    width: 100%; 
+    height: 180px; 
+    object-fit: cover; 
+}
+
+.perfil-container {
+    text-align: center; 
+    padding: 0 20px;
+}
+
+.img-perfil {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%; 
+    border: 4px solid #38bdf8; 
+    margin-top: -65px; 
+    background-color: #1e293b;
+}
+
+.nome-perfil {
+    color: #38bdf8;
+    margin-top: 12px;
+    margin-bottom: 0;
+    font-size: 1.8rem;
+}
+
+.bio-perfil {
+    color: #94a3b8;
+    font-size: 1rem;
+    margin-top: 4px;
+    margin-bottom: 0;
+}  
+
+/* ==========================================
+   ESTRUTURA DO POEMA E DO AUTOR
+   ========================================== */
 .autor {
     font-family: 'Roboto', sans-serif;
-    color: #000000;
-    font-size: 50px; /* Aumentado para dar mais destaque */
-    margin: 0;
+    color: #000000; 
+    font-size: 50px; 
+    margin: 20px 0 0 0;
     text-transform: uppercase;
     letter-spacing: 2px;
     text-align: center;
 }
 
 .imagem-poema {
-    max-width: 230px;
+    max-width: 230px; 
     height: auto;
     border-radius: 8px;
 }
 
-/* Fundo branco que se ajusta ao texto do poema */
 .poema {
-    background-color: #ffffff8f;
+    background-color: #ffffff8f; 
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -88,23 +100,20 @@ p {
     max-width: 100%; 
     box-sizing: border-box; 
     
-    /* Alinha o título e os parágrafos verticalmente */
     display: flex;
     flex-direction: column;
     gap: 15px; 
 }
 
-/* Título dentro da caixa branca */
 .titulo-poema {
-    color: #333333; /* Cor escura para contrastar com o fundo branco */
+    color: #333333; 
     font-size: 22px;
     margin: 0 0 10px 0;
     font-style: italic;
-    border-bottom: 1px solid #eeeeee; /* Adiciona uma linha sutil abaixo do título */
+    border-bottom: 1px solid #eeeeee; 
     padding-bottom: 10px;
 }
 
-/* Ano do poema */
 .ano {
     font-size: 16px;
     color: #777777;
