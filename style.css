@@ -1,8 +1,27 @@
 /* ==========================================
-   CONFIGURAÇÃO GERAL DA PÁGINA
+   💡 DESIGN SYSTEM & VARIÁVEIS (PADRÃO DE MERCADO)
+   ========================================== */
+:root {
+    /* Paleta de Cores (Inspirada no Slate/Sky/Slate do Tailwind) */
+    --color-bg-main: #f0f9ff;       /* Azul ultra claro, fosco e elegante */
+    --color-bg-card: rgba(255, 255, 255, 0.75); /* Base para Glassmorphism */
+    --color-brand-dark: #0f172a;    /* Slate 900 (Textos principais e cabeçalho) */
+    --color-brand-accent: #0284c7;  /* Sky 600 (Destaques e links ativos) */
+    --color-text-muted: #64748b;    /* Slate 500 (Textos secundários e ano) */
+    --color-border-subtle: #e2e8f0; /* Slate 200 (Linhas divisórias) */
+    
+    /* Espaçamentos e Bordas */
+    --radius-lg: 16px;
+    --radius-md: 12px;
+    --radius-sm: 8px;
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==========================================
+   📌 CONFIGURAÇÃO GLOBAL E RESET
    ========================================== */
 body {
-    background-color: #72c7ff;
+    background-color: var(--color-bg-main);
     margin: 0;
     padding: 0;
     min-height: 100vh;
@@ -10,103 +29,108 @@ body {
     flex-direction: column; 
     align-items: stretch; 
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    color: #1e293b; /* Define uma cor padrão escura e suave para textos gerais */
+    color: var(--color-brand-dark);
+    -webkit-font-smoothing: antialiased; /* Deixa o contorno das fontes mais nítido */
 }
 
 .container {
     display: flex;
     flex-direction: column;
     align-items: center; 
-    gap: 24px; 
-    padding: 40px 20px; 
+    gap: 32px; 
+    padding: 60px 24px; 
 }
 
 /* ==========================================
-   ESTRUTURA DO CABEÇALHO (MELHORADO)
+   📌 CABEÇALHO PROFISSIONAL (PERFIL)
    ========================================== */
 .cabecalho {
-    background-color: #1e293b;
-    border-bottom: 3px solid #003a53; 
-    padding-bottom: 35px;
+    background-color: var(--color-brand-dark);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+    padding-bottom: 40px;
     width: 100%; 
 } 
 
 .img-banner {
     width: 100%; 
-    height: 200px; /* Aumentado levemente para melhor proporção */
+    height: 220px; 
     object-fit: cover; 
 }
 
 .perfil-container {
     text-align: left; 
-    padding: 0 40px;  
+    padding: 0 60px;  
     display: flex;
     flex-direction: column;
     align-items: flex-start; 
 }
 
 .img-perfil {
-    width: 130px;
-    height: 130px;
+    width: 140px;
+    height: 140px;
     object-fit: cover;
     border-radius: 50%; 
-    border: 4px solid #1e293b; /* Mudado para combinar com o fundo do cabeçalho */
-    margin-top: -65px; 
+    border: 4px solid var(--color-brand-dark); 
+    margin-top: -70px; 
     background-color: #ffffff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adicionada sombra para destacar do banner */
-    transition: transform 0.3s ease; /* Prepara para a animação */
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+    transition: var(--transition-smooth);
 }
 
-/* Efeito interativo profissional na foto de perfil */
+/* Feedback visual interativo (Micro-interações de UX) */
 .img-perfil:hover {
-    transform: scale(1.05); /* Dá um leve zoom ao passar o mouse */
+    transform: scale(1.03) rotate(2deg);
 }
 
 .nome-perfil {
-    color: #ffffff; /* MELHORADO: Branco para contraste perfeito no fundo escuro */
-    margin-top: 16px;
+    color: #ffffff; 
+    margin-top: 20px;
     margin-bottom: 0;
-    font-size: 2rem;
-    font-weight: 700; 
+    font-size: 2.2rem;
+    font-weight: 800; 
+    letter-spacing: -0.5px; /* Ajuste óptico profissional */
 }
 
 .bio-perfil {
-    color: #38bdf8; /* MELHORADO: Azul claro para destacar a sua profissão */
-    font-size: 1rem;
+    color: #38bdf8; 
+    font-size: 1.05rem;
     margin-top: 6px;
     margin-bottom: 0;
     font-weight: 500;
 }  
 
 /* ==========================================
-   ESTRUTURA DO POEMA E DO AUTOR (MELHORADO)
+   📌 ESTRUTURA DO POEMA (EDITORIAL & LIMPO)
    ========================================== */
 .autor {
-    color: #0f172a; /* Azul escuro quase preto, mais moderno que preto puro */
-    font-size: 44px; 
-    margin: 30px 0 10px 0;
+    color: var(--color-brand-dark); 
+    font-size: 40px; 
+    margin: 20px 0 0 0;
     text-transform: uppercase;
-    letter-spacing: 4px; 
+    letter-spacing: 6px; /* Efeito editorial de revista/livro */
     text-align: center;
-    font-weight: 800; 
+    font-weight: 900; 
 }
 
 .imagem-poema {
-    max-width: 350px; 
+    max-width: 400px; /* Aumentado ligeiramente para melhor balanço visual */
     width: 100%; 
     height: auto;
-    border-radius: 12px; 
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Sombra mais profunda e realista */
+    border-radius: var(--radius-md); 
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
+/* Caixa do Poema: Glassmorphism Premium */
 .poema {
-    background-color: rgba(255, 255, 255, 0.94); /* MELHORADO: Mais opaco para leitura perfeita */
-    backdrop-filter: blur(8px); /* Efeito de vidro moderno */
-    padding: 40px; 
-    border-radius: 16px; /* Cantos levemente mais arredondados */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Sombra mais suave e elegante */
+    background-color: var(--color-bg-card); 
+    backdrop-filter: blur(12px) saturate(180%); /* Desfoque de vidro de alto nível */
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Borda fina para simular reflexo do vidro */
+    padding: 48px 64px; 
+    border-radius: var(--radius-lg);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.05);
     text-align: center;
-    line-height: 1.8; 
+    line-height: 1.9; 
     font-size: 18px;
     font-weight: 500; 
     
@@ -116,51 +140,55 @@ body {
     
     display: flex;
     flex-direction: column;
-    gap: 20px; 
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    gap: 24px; 
+    transition: var(--transition-smooth);
 }
 
-/* Efeito sutil ao passar o mouse na caixa do poema */
 .poema:hover {
-    transform: translateY(-4px); /* Sobe de leve a caixa */
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12); /* Aumenta a sombra */
+    transform: translateY(-2px);
+    box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.1);
 }
 
 .titulo-poema {
-    color: #1e293b; 
-    font-size: 24px;
-    margin: 0 0 5px 0;
+    color: var(--color-brand-dark); 
+    font-size: 26px;
+    margin: 0 0 12px 0;
     font-style: italic;
     font-weight: 700;
-    border-bottom: 2px solid #e2e8f0; 
-    padding-bottom: 12px;
+    border-bottom: 1px solid var(--color-border-subtle); 
+    padding-bottom: 16px;
 }
 
 .ano {
     font-size: 16px;
-    color: #64748b; 
+    color: var(--color-text-muted); 
     font-weight: 400;
     font-style: normal; 
 }
 
 /* ==========================================
-   RESPONSIVIDADE (CELULARES)
+   📱 RESPONSIVIDADE AVANÇADA (MOBILE-FIRST)
    ========================================== */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .perfil-container {
-        padding: 0 20px; /* Reduz espaço lateral no celular */
-    }
-    
-    .autor {
-        font-size: 32px; /* Diminui o nome do autor para não quebrar a tela */
-    }
-    
-    .poema {
-        padding: 25px 20px; /* Deixa a caixa do poema mais compacta em telas pequenas */
-        font-size: 16px; /* Diminui um pouco a letra do poema para celulares */
+        padding: 0 30px; 
     }
     
     .nome-perfil {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
+    }
+
+    .autor {
+        font-size: 28px; 
+        letter-spacing: 4px;
+    }
+    
+    .poema {
+        padding: 32px 24px; 
+        font-size: 16px; 
+    }
+    
+    .titulo-poema {
+        font-size: 22px;
     }
 }
