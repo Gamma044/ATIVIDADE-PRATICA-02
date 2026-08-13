@@ -18,7 +18,7 @@ body {
 
 /* Autor no topo: Letras brancas, maiores e com destaque */
 .autor {
-    font-family: 'Tahoma', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #000000;
     font-size: 28px; /* Aumentado para dar mais destaque */
     margin: 0;
