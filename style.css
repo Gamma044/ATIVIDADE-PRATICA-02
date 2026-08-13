@@ -1,5 +1,5 @@
 body {
-    background-color: #ff9393;
+    background-color: #72c7ff;
     margin: 0;
     min-height: 100vh;
     display: flex;
@@ -19,7 +19,7 @@ body {
 /* Autor no topo: Letras brancas, maiores e com destaque */
 .autor {
     font-family: 'Tahoma', sans-serif;
-    color: #ffffff;
+    color: #000000;
     font-size: 28px; /* Aumentado para dar mais destaque */
     margin: 0;
     text-transform: uppercase;
@@ -35,7 +35,7 @@ body {
 
 /* Fundo branco que se ajusta ao texto do poema */
 .poema {
-    background-color: #ffffff;
+    background-color: #ffffff8f;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
