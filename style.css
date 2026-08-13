@@ -20,7 +20,7 @@ body {
 .autor {
     font-family: 'Roboto', sans-serif;
     color: #000000;
-    font-size: 80px; /* Aumentado para dar mais destaque */
+    font-size: 50px; /* Aumentado para dar mais destaque */
     margin: 0;
     text-transform: uppercase;
     letter-spacing: 2px;
