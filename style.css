@@ -9,6 +9,10 @@ body {
 }
 
 .poema {
+    background-color: #ffffff; /* Adiciona o fundo branco */
+    padding: 30px;            /* Cria um espaço entre o texto e a borda do fundo */
+    border-radius: 10px;      /* Opcional: deixa as pontas do fundo arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Opcional: cria uma leve sombra ao redor */
     text-align: center;
     line-height: 1.6;
     font-family: 'Tahoma', sans-serif;
