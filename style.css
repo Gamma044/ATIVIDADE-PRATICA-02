@@ -16,39 +16,24 @@ body {
     padding: 20px;
 }
 
+/* Autor no topo: Letras brancas, maiores e com destaque */
+.autor {
+    font-family: 'Tahoma', sans-serif;
+    color: #ffffff;
+    font-size: 28px; /* Aumentado para dar mais destaque */
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
 .imagem-poema {
     max-width: 150px;
     height: auto;
     border-radius: 8px;
 }
 
-/* Estilo do bloco de títulos */
-.cabecalho-poema {
-    text-align: center;
-    font-family: 'Tahoma', sans-serif;
-    color: #ffffff; /* Letras brancas para contrastar com o fundo rosa */
-}
-
-.autor {
-    font-size: 20px;
-    margin: 0 0 5px 0;
-    text-transform: uppercase;
-    letter-spacing: 1px; /* Espaçamento elegante entre as letras */
-}
-
-.titulo-poema {
-    font-size: 16px;
-    font-weight: normal;
-    margin: 0;
-    font-style: italic; /* Deixa o nome do poema em itálico */
-}
-
-.ano {
-    font-size: 14px;
-    opacity: 0.8; /* Deixa o ano levemente mais claro */
-}
-
-/* Fundo branco apenas para o texto do poema */
+/* Fundo branco que se ajusta ao texto do poema */
 .poema {
     background-color: #ffffff;
     padding: 30px;
@@ -63,4 +48,26 @@ body {
     width: max-content; 
     max-width: 100%; 
     box-sizing: border-box; 
+    
+    /* Alinha o título e os parágrafos verticalmente */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+}
+
+/* Título dentro da caixa branca */
+.titulo-poema {
+    color: #333333; /* Cor escura para contrastar com o fundo branco */
+    font-size: 22px;
+    margin: 0 0 10px 0;
+    font-style: italic;
+    border-bottom: 1px solid #eeeeee; /* Adiciona uma linha sutil abaixo do título */
+    padding-bottom: 10px;
+}
+
+/* Ano do poema */
+.ano {
+    font-size: 16px;
+    color: #777777;
+    font-weight: normal;
 }
