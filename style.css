@@ -8,8 +8,9 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column; 
-    align-items: stretch; /* Permite que o cabeçalho estique até as bordas */
-    font-family: Arial, sans-serif;
+    align-items: stretch; 
+    /* FONTE DO SITE: Substituída Arial por famílias mais limpas e modernas */
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 /* Garante que os elementos abaixo do cabeçalho fiquem centralizados */
@@ -17,7 +18,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center; 
-    gap: 20px;
+    gap: 24px; /* Aumentado levemente o espaçamento para melhor respiro */
     padding: 40px 20px; 
 }
 
@@ -28,7 +29,7 @@ body {
     background-color: #1e293b;
     border-bottom: 3px solid #003a53; 
     padding-bottom: 30px;
-    width: 100%; /* Força o cabeçalho a cobrir toda a área do site */
+    width: 100%; 
 } 
 
 .img-banner {
@@ -38,11 +39,11 @@ body {
 }
 
 .perfil-container {
-    text-align: left; /* ALTERADO: Alinha a foto, nome e descrição à esquerda */
-    padding: 0 40px;  /* ALTERADO: Dá um espaço confortável em relação à borda esquerda da tela */
+    text-align: left; 
+    padding: 0 40px;  
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Garante que os textos e a imagem alinhem à esquerda por completo */
+    align-items: flex-start; 
 }
 
 .img-perfil {
@@ -53,7 +54,7 @@ body {
     border: 4px solid #003a53; 
     margin-top: -65px; 
     background-color: #ffffff;
-    margin-left: 0; /* Garante alinhamento total à esquerda */
+    margin-left: 0; 
 }
 
 .nome-perfil {
@@ -61,7 +62,8 @@ body {
     margin-top: 12px;
     margin-bottom: 0;
     font-size: 1.8rem;
-    text-align: left; /* Garante alinhamento do texto */
+    text-align: left; 
+    font-weight: 700; /* Define um peso marcante para o nome */
 }
 
 .bio-perfil {
@@ -69,38 +71,41 @@ body {
     font-size: 1rem;
     margin-top: 4px;
     margin-bottom: 0;
-    text-align: left; /* Garante alinhamento do texto */
+    text-align: left; 
+    font-weight: 400;
 }  
 
 /* ==========================================
    ESTRUTURA DO POEMA E DO AUTOR
    ========================================== */
 .autor {
-    font-family: 'Roboto', sans-serif;
     color: #000000; 
-    font-size: 50px; 
+    font-size: 48px; /* Ajuste milimétrico para harmonizar */
     margin: 20px 0 0 0;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 3px; /* Aumentado o espaçamento para um tom editorial */
     text-align: center;
+    font-weight: 800; /* Estilo ultra-bold bem profissional */
 }
 
 .imagem-poema {
-    max-width: 230px; 
+    max-width: 350px; /* ALTERADO: Imagem aumentada de 230px para 350px */
+    width: 100%; /* Garante que ela encolha caso a tela do celular seja menor */
     height: auto;
-    border-radius: 8px;
+    border-radius: 12px; /* Cantos levemente mais suaves acompanhando o tamanho maior */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Adicionada uma sombra leve na imagem */
 }
 
+/* Fundo branco que se ajusta ao texto do poema */
 .poema {
     background-color: #ffffff8f; 
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px; /* Aumentado para dar mais respiro ao texto maior */
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
     text-align: center;
-    line-height: 1.6;
-    font-family: 'Tahoma', sans-serif;
+    line-height: 1.8; /* Aumentado o espaçamento entre linhas para leitura confortável */
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 500; /* Peso médio (muda o visual esticado do bold padrão) */
     
     width: max-content; 
     max-width: 100%; 
@@ -108,20 +113,24 @@ body {
     
     display: flex;
     flex-direction: column;
-    gap: 15px; 
+    gap: 20px; 
 }
 
+/* Título dentro da caixa branca */
 .titulo-poema {
-    color: #333333; 
-    font-size: 22px;
+    color: #1e293b; /* Tom cinza-escuro profissional em vez do preto puro */
+    font-size: 24px;
     margin: 0 0 10px 0;
     font-style: italic;
-    border-bottom: 1px solid #eeeeee; 
-    padding-bottom: 10px;
+    font-weight: 600;
+    border-bottom: 2px solid #e2e8f0; /* Linha divisória mais moderna e sutil */
+    padding-bottom: 12px;
 }
 
+/* Ano do poema */
 .ano {
     font-size: 16px;
-    color: #777777;
-    font-weight: normal;
+    color: #64748b; /* Cor mais suave e alinhada com paletas de design modernas */
+    font-weight: 400;
+    font-style: normal; /* Remove o itálico apenas do ano */
 }
